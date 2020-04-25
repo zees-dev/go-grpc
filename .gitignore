@@ -1,0 +1,8 @@
+
+
+# Protobuf generated
+protos/*.pb.*
+
+# Binaries
+grpc-client
+grpc-server
