@@ -49,10 +49,6 @@ Note: The client continously exits when gRPC server successfully recieves messag
 - [ ] Setup Makefile
 - [ ] Github actions (CICD)
 
-### Bugs
-
-- [ ] client prints out address flags when passed in
-
 ## Tests
 
   ```sh

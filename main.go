@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"log"
-	"os"
 
 	"github.com/zees-dev/go-grpc/internal/client"
 	"github.com/zees-dev/go-grpc/internal/server"
@@ -19,7 +18,7 @@ func main() {
 	case "server":
 		server.RunServer(uint16(*serverPortPtr))
 	case "client":
-		client.RunClient(*serverAddrPtr, os.Args[3:]...)
+		client.RunClient(*serverAddrPtr, flag.Args()...)
 	default:
 		log.Printf("Unkown grpc service type: %q", *typePtr)
 	}
