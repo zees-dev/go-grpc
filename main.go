@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/zees-dev/go-grpc/internal/server"
 	"github.com/zees-dev/go-grpc/internal/client"
+	"github.com/zees-dev/go-grpc/internal/server"
 )
 
 func main() {

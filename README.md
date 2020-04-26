@@ -29,14 +29,28 @@ This project is meant to be a template to allow one to quickly bootstrap a gRPC 
   ./main -type client my-message
   ```
 
+## Docker
+
+Run server and client via docker-compose:
+
+  ```sh
+  docker-compose up --build
+  ```
+
+Note: The client continously exits when gRPC server successfully recieves message from client
+
 ## TODO
 
 - [x] Server implementation
 - [x] Client implementation
 - [ ] Unit Tests
-- [ ] Containerisation (Docker)
+- [x] Containerisation (Docker)
 - [ ] Github actions (CICD)
 - [ ] Docs
+
+### Bugs
+
+- [ ] client prints out address flags when passed in
 
 ## Tests
 
