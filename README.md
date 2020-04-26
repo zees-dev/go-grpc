@@ -5,11 +5,29 @@ This project is meant to be a template to allow one to quickly bootstrap a gRPC 
 
 ## Build
 
-1. Generate Protobuf source files:\
-  ```protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto```
+- Generate Protobuf source files:
 
-2. Build & Run solution:\
-  ```go run main.go```
+  ```sh
+  protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+  ```
+
+- Build solution:
+
+  ```sh
+  go build main.go
+  ```
+
+- Run Server:
+
+  ```sh
+  ./main -type server
+  ```
+
+- Run client - with message _"my-message"_:
+
+  ```sh
+  ./main -type client my-message
+  ```
 
 ## TODO
 
@@ -22,7 +40,9 @@ This project is meant to be a template to allow one to quickly bootstrap a gRPC 
 
 ## Tests
 
-```go test```
+  ```sh
+  go test
+  ```
 
 ## License
 
