@@ -3,6 +3,7 @@
 # Protobuf generated
 internal/protos/*.pb.go
 
+
 # Binaries
 grpc-client
 grpc-server
