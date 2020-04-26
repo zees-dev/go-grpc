@@ -48,6 +48,7 @@ Note: The client continously exits when gRPC server successfully recieves messag
 - [ ] Unit Tests
 - [x] Containerisation (Docker)
 - [ ] Docs
+- [ ] Godoc
 - [ ] Setup Makefile
 - [ ] Github actions (CICD)
 
