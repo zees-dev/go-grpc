@@ -1,8 +1,9 @@
 
 
 # Protobuf generated
-protos/*.pb.*
+internal/protos/*.pb.go
 
 # Binaries
 grpc-client
 grpc-server
+main

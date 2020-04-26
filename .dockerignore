@@ -6,4 +6,4 @@
 !/**.go
 
 # Ignore protobuf generated
-protos/*.pb.*
+internal/protos/*.pb.*
