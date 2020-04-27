@@ -27,3 +27,7 @@ docker-up:
 
 docker-down:
 	docker-compose down
+
+doc:
+	godoc -http localhost:6060
+.PHONY: doc
