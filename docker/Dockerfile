@@ -1,27 +1,25 @@
 # BUILD
-FROM golang:alpine as builder
+FROM golang:1.14 as build
 LABEL maintainer="github.com/zees-dev"
 
-ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && \
+  apt install -y protobuf-compiler
+RUN go get github.com/golang/protobuf/protoc-gen-go
 
-RUN apk add --update \
-  git \
-  protobuf \
-  && go get github.com/golang/protobuf/protoc-gen-go
+WORKDIR /go/src/app
 
-WORKDIR /go/src/grpc
+# cache depedency downloads
 COPY main.go go.mod go.sum ./
+RUN go mod download
 COPY internal internal
-RUN protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto && \
-  go build main.go && \
-  chmod +x ./main
 
-# Generate entrypoint
-RUN echo '#!/bin/sh' > /docker-entrypoint.sh && \
-  echo 'set -ex' >> /docker-entrypoint.sh && \
-  echo 'exec "$@"' >> /docker-entrypoint.sh && \
-  chmod +x /docker-entrypoint.sh
+# generate & build
+RUN protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+RUN go build -o /go/bin/app
 
+# MERGE
+FROM gcr.io/distroless/base
+COPY --from=build /go/bin/app /bin/
 EXPOSE 50051
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["/go/src/grpc/main","-type","server"]
+ENTRYPOINT [ "/bin/app" ]
+CMD ["-type", "server"]

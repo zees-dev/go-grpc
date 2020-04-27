@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     container_name: grpc-client
-    command: sh -c "./main -type client -address grpc-server:50051"
+    command: ["-type", "client", "-address", "grpc-server:50051"]
     restart: unless-stopped
     depends_on:
       - grpc-server

@@ -49,7 +49,7 @@ Note: The client continously exits when gRPC server successfully recieves messag
 - [x] Client implementation
 - [ ] Unit Tests
 - [x] Containerisation (Docker)
-- [ ] Create/Use distroless based prod docker image
+- [x] Create/Use distroless based prod docker image
 - [ ] Docs
 - [ ] Godoc
 - [ ] Setup Makefile
