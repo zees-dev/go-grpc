@@ -18,19 +18,19 @@ Note: This project is a WIP and will continue to grow as expertise in gRPC based
 - Build solution:
 
   ```sh
-  go build main.go
+  go build -o grpc main.go
   ```
 
 - Run Server:
 
   ```sh
-  ./main -type server
+  ./grpc -type server
   ```
 
 - Run client - with message _"my-message"_:
 
   ```sh
-  ./main -type client my-message
+  ./grpc -type client my-message
   ```
 
 ## Docker
