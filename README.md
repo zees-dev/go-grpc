@@ -53,7 +53,7 @@ Note: The client continously exits when gRPC server successfully recieves messag
 - [x] Containerisation (Docker)
 - [x] Create/Use distroless based prod docker image
 - [x] Docs - Architecture Design Records
-- [ ] Godoc
+- [x] Godoc support
 - [x] Setup Makefile
 - [ ] Github actions (CICD)
 

@@ -1,3 +1,4 @@
+// Package client contains functionality to initiate a gRPC client
 package client
 
 import (

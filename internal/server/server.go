@@ -1,3 +1,4 @@
+// Package server contains functionality to initiate a gRPC server
 package server
 
 import (
@@ -19,6 +20,7 @@ func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloRe
 	return &pb.HelloReply{Message: in.GetName()}, nil
 }
 
+// RunServer runs gRPC server at the desired port
 func RunServer(port uint16) {
 	portStr := fmt.Sprintf(":%v", port)
 	lis, err := net.Listen("tcp", portStr)
