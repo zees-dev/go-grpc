@@ -1,24 +1,12 @@
 
-# Ignore everything - todo
 
-# Allow only source go files
+# Use whitelist approach
+
+# Ignore everything
+**
+
+# Whitelist files/dirs
+!go.mod
+!go.sum
 !*.go
 !internal/
-
-# Files & Codegen
-internal/protos/*.pb.go
-*_test.go
-.gitignore
-LICENSE
-Makefile
-README.md
-
-# Dirs
-.git
-docker
-test
-docs
-
-# Docker
-*[Dd]ocker*
-
