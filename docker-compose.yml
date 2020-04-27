@@ -2,18 +2,14 @@ version: '3.7'
 
 services:
   grpc-server:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
+    build: .
     container_name: grpc-server
     restart: unless-stopped
     ports:
       - 50051:50051
 
   grpc-client:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
+    build: .
     container_name: grpc-client
     command: ["-type", "client", "-address", "grpc-server:50051"]
     restart: unless-stopped

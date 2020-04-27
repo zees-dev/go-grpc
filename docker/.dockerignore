@@ -1,9 +1,0 @@
-
-# Ignore everything - todo
-
-# Allow only source go files
-!*.go
-!internal/
-
-# Ignore protobuf generated
-internal/protos/*.pb.go
