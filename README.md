@@ -9,7 +9,18 @@ All architectural decisions are documented as architecture design records (ADR's
 
 Note: This project is a WIP and will continue to grow as expertise in gRPC based microservice architecture develops.
 
-## Build
+---
+
+## Local Setup
+
+### Pre-requisites
+
+- [protoc](https://github.com/protocolbuffers/protobuf/releases) compiler - pre-compiled binary for your OS
+  - add this to your path
+- **protoc-gen-go** - protoc plugin for go
+  - ```go get github.com/golang/protobuf/protoc-gen-go```
+
+### Build
 
 - Generate Protobuf source files:
 
@@ -23,6 +34,8 @@ Note: This project is a WIP and will continue to grow as expertise in gRPC based
   go build -o grpc main.go
   ```
 
+### Run
+
 - Run Server:
 
   ```sh
@@ -35,6 +48,8 @@ Note: This project is a WIP and will continue to grow as expertise in gRPC based
   ./grpc -type client my-message
   ```
 
+---
+
 ## Docker
 
 Run server and client via docker-compose:
@@ -44,6 +59,8 @@ Run server and client via docker-compose:
   ```
 
 Note: The client continously exits when gRPC server successfully recieves message from client
+
+---
 
 ## TODO
 
@@ -57,11 +74,15 @@ Note: The client continously exits when gRPC server successfully recieves messag
 - [x] Setup Makefile
 - [ ] Github actions (CICD)
 
+---
+
 ## Tests
 
   ```sh
   go test
   ```
+
+---
 
 ## License
 
