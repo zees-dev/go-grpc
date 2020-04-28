@@ -14,7 +14,7 @@ Note: This project is a WIP and will continue to grow as expertise in gRPC based
 - Generate Protobuf source files:
 
   ```sh
-  protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+  protoc --go_out=plugins=grpc:. ./api/protobuf-spec/hello.proto
   ```
 
 - Build solution:

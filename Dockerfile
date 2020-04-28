@@ -13,7 +13,7 @@ COPY . .
 RUN go mod download
 
 # generate & build
-RUN protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+RUN protoc --go_out=plugins=grpc:. ./api/protobuf-spec/hello.proto
 RUN go build -o /go/bin/grpc
 
 # MERGE
