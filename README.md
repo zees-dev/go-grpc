@@ -15,8 +15,8 @@ Note: This project is a WIP and will continue to grow as expertise in gRPC based
 
 ### Pre-requisites
 
-- [protoc](https://github.com/protocolbuffers/protobuf/releases) compiler - pre-compiled binary for your OS
-  - add this to your path
+- [protoc compiler](https://github.com/protocolbuffers/protobuf/releases) - pre-compiled binary for your OS
+  - Note: add this to your path
 - **protoc-gen-go** - protoc plugin for go
   - ```go get github.com/golang/protobuf/protoc-gen-go```
 
