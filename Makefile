@@ -1,10 +1,10 @@
 all: codegen test clean build
 
 codegen:
-	protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+	protoc --go_out=plugins=grpc:. ./api/protobuf-spec/hello.proto
 
 build:
-	protoc --go_out=plugins=grpc:. ./internal/protos/hello.proto
+	protoc --go_out=plugins=grpc:. ./api/protobuf-spec/hello.proto
 	go build -o grpc main.go
 
 clean:

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	pb "github.com/zees-dev/go-grpc/internal/protos"
+	pb "github.com/zees-dev/go-grpc/internal/protobuf"
 	"google.golang.org/grpc"
 )
 

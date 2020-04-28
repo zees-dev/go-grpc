@@ -1,7 +1,7 @@
 
 
 # Protobuf generated
-internal/protos/*.pb.go
+internal/protobuf
 
 
 # Binaries
